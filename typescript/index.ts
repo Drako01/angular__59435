@@ -146,12 +146,10 @@ class Producto {
 class Carrito { 
     productos: Producto[] = [];
 
-    // Agrega productos al carrito
     agregarProducto(producto: Producto) {
         this.productos.push(producto);
     }
 
-    // Calcula el total del carrito
     calcularTotal(): number {
         return this.productos.reduce((prev, next) => prev + next.precio, 0);
     }
@@ -161,27 +159,26 @@ class MyEcommerce {
     productos: Producto[] = [];
     carrito: Carrito = new Carrito();
 
-    // Agrega un producto al carrito
+    constructor(productos: Producto[] = []) {
+        this.productos = productos;
+    }
+
     agregarAlCarrito(producto: Producto) {
         this.carrito.agregarProducto(producto);
     }
 
-    // Simula el pago del carrito
     pagar() {
         const total = this.carrito.calcularTotal();
         console.log(`El total a pagar es: $${total}`);
-        // Vaciar el carrito después de pagar (opcional)
-        this.carrito.productos = [];
+        this.carrito.productos = []; // Vaciar el carrito después del pago (opcional)
     }
 }
 
+// Ahora puedes instanciar la clase con productos predeterminados
+const app = new MyEcommerce([new Producto('TV LED 42"', 9999)]);
+
 // Ejemplo de uso:
-const ecommerce = new MyEcommerce();
-const producto1 = new Producto("Televisor", 50000);
-const producto2 = new Producto("Laptop", 120000);
+console.log("Productos disponibles en la tienda:", app.productos);
 
-ecommerce.agregarAlCarrito(producto1);
-ecommerce.agregarAlCarrito(producto2);
-
-// Mostrar el total y pagar
-ecommerce.pagar();  // El total a pagar es: $170000
+app.agregarAlCarrito(app.productos[0]);  // Agregar producto al carrito
+app.pagar();  // El total a pagar es: $9999
