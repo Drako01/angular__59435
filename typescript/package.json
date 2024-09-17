@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drako01/angular__59435.git"
+  },
+  "author": "Alejandro Di Stefano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drako01/angular__59435/issues"
+  },
+  "homepage": "https://github.com/Drako01/angular__59435#readme",
+  "dependencies": {
+    "typescript": "file:"
+  }
+}
