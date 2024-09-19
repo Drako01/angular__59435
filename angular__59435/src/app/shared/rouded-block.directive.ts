@@ -11,7 +11,7 @@ export class RoudedBlockDirective {
     elementRef.nativeElement.textContent = 'Este texto fue manipulado desde appRoudedBlock';
     elementRef.nativeElement.style.backgroundColor = 'yellow';
     elementRef.nativeElement.style.padding = '10px';
-    elementRef.nativeElement.style.margin = '10px';
+    elementRef.nativeElement.style.margin = '20px 80px';
     elementRef.nativeElement.style.borderRadius = '10px';
     elementRef.nativeElement.style.color = 'blue';
     if (elementRef.nativeElement.tagName === 'P') {

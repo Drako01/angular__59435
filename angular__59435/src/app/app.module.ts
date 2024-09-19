@@ -9,6 +9,7 @@ import { MainWapperComponent } from './components/main-wapper/main-wapper.compon
 import { HeaderAppComponent } from './components/header-app/header-app.component';
 import { StudentsComponent } from './pages/students/students.component';
 import { RoudedBlockDirective } from './shared/rouded-block.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { RoudedBlockDirective } from './shared/rouded-block.directive';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

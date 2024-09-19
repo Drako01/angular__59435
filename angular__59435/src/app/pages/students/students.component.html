@@ -47,9 +47,129 @@
 
 
 <p appRoudedBlock>
-  Directiva personalizada
+  Directiva personalizada en un P
 </p>
 <h3 appRoudedBlock>
-  Directiva personalizada H3
+  Directiva personalizada en un H3
 </h3>
 
+<hr>
+
+<h3>Directivas Estructurales</h3>
+<h4>ngFor</h4>
+<ul>
+  <li *ngFor="let fruta of frutas; let i = index">
+    {{i}} - {{fruta}}
+  </li>
+</ul>
+<h4>Solo con Angular 17 o Superior</h4>
+<ul>
+  @for (fruta of frutas; track $index){
+    <li *ngIf="$index !== 1">{{$index}} - {{fruta}}</li>
+  }
+</ul>
+<h4>ngIf</h4>
+
+<p *ngIf="mostrarParrafo; else noMostrarParrafoP">
+  Hola mundo!
+</p>
+<ng-template #noMostrarParrafoP>
+  <p>Hola mundo!</p>
+</ng-template>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Aprobado</th>
+      <th>Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ alumno.nombre }}</td>
+      <td [ngClass]="alumno.estaAprobado ? 'success' : 'error'">
+        {{ alumno.estaAprobado }}
+      </td>
+      <td>
+        <button (click)="alumno.estaAprobado = !alumno.estaAprobado">
+          {{ alumno.estaAprobado ? "DESAPROBAR" : "APROBAR" }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p *ngIf="noMostrarParrafo">
+  Hola mundo!
+</p>
+<h4>Solo con Angular 17 o Superior</h4>
+@if (mostrarParrafo) {
+  <p>Mostar</p>
+}@else{
+  <p>Ocultar</p>
+}
+
+
+<hr>
+
+<h4>*ngSwitch</h4>
+
+<ng-container [ngSwitch]="conditionExpression">
+
+  <div *ngSwitchCase="'Pendiente'">
+    <p>Su compra esta Pendiente...</p>
+  </div>
+  <div *ngSwitchCase="'Aprobada'">
+    <p>Su compra esta Aprobada...</p>
+  </div>
+  <div *ngSwitchCase="'Entregada'">
+    <p>Su compra esta Entregada...</p>
+  </div>
+
+</ng-container>
+
+<h4>Solo con Angular 17 o Superior</h4>
+
+@switch (conditionExpression17) {
+  @case ('Pendiente'){
+  <p>Su compra esta Pendiente...</p>
+  }
+  @case ('Aprobada'){
+    <p>Su compra esta Aprobada...</p>
+  }
+  @case ('Entregada'){
+    <p>Su compra esta Entregada...</p>
+  }
+}
+<h2>Tipos de enlazamiento</h2>
+
+<!-- ONE WAY BINDING -->
+<input [type]="inputType" />
+<!-- ENTRADA DE DATOS PARA EL INPUT-->
+<button (click)="inputType = 'password'">Click me!</button>
+<!-- SALIDA DE DATOS DESDE EL BOTON-->
+
+
+<br><br>
+<!-- TWO WAY BINDING -->
+<input [(ngModel)]="inputValor" type="text" />
+
+<p>{{ inputValor }}</p>
+
+<hr>
+
+<h4>Pipes</h4>
+
+<p>Mi Cumpleaños es el {{ birthday | date }}</p>
+
+<p>{{ today | date : "dd-MM-YYYY" }}</p>
+
+<p>{{ price | currency }}</p>
+
+<p>{{ inputType | uppercase }}</p>
+<p>{{ inputType | lowercase }}</p>
+<p>{{ inputType | titlecase }}</p>
