@@ -5,5 +5,51 @@
     <li>Alumno 3</li>
     <li>Alumno 4</li>
     <li>Alumno 5</li>
+    <li>{{ persona.nombre }} {{ persona.apellido}}</li>
   </ul>
 </aside>
+
+<input [type]="inputType"> <button (click)="alternarInputType()">Mostrar/Ocultar</button>
+<input [type]="inputType"> <button (mouseleave)="inputType = 'password'"
+  (mouseover)="inputType = 'text'">Mostrar/Ocultar</button>
+
+<p [ngClass]="hayError ? 'error' : 'success'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus voluptates totam deleniti labore dolor
+  expedita, cum et atque! Rem dolorem excepturi illo eum! Praesentium cumque iure alias ipsam eveniet.
+</p>
+
+<p [ngClass]="{ error: hayError, success: !hayError}">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus voluptates totam deleniti labore dolor
+  expedita, cum et atque! Rem dolorem excepturi illo eum! Praesentium cumque iure alias ipsam eveniet.
+</p>
+
+<p [class.error]="hayError" [class.success]="!hayError">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus voluptates totam deleniti labore dolor
+  expedita, cum et atque! Rem dolorem excepturi illo eum! Praesentium cumque iure alias ipsam eveniet.
+</p>
+
+<hr>
+
+<p [ngStyle]="{color: hayError ? 'red': 'green', fontSize: '20px'}">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ab incidunt tempora excepturi accusamus neque voluptas
+  dolorem illum, quo exercitationem iure assumenda libero ut ducimus aliquam, beatae illo optio ipsam?
+</p>
+
+<p [style.font-size]="hayError ? '25px' : '28px'">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ab incidunt tempora excepturi accusamus neque voluptas
+  dolorem illum, quo exercitationem iure assumenda libero ut ducimus aliquam, beatae illo optio ipsam?
+</p>
+
+<p [class]="'success'">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quibusdam consequatur consectetur sunt corporis ea
+  iste optio delectus blanditiis voluptas mollitia ratione porro, aliquam rem soluta sit architecto veniam impedit.
+</p>
+
+
+<p appRoudedBlock>
+  Directiva personalizada
+</p>
+<h3 appRoudedBlock>
+  Directiva personalizada H3
+</h3>
+

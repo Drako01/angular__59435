@@ -1,8 +1,10 @@
 <app-main-wapper>
   <app-header-app />
+  {{ title }}
   <app-top-bar />
   <app-side-bar />
   <h1>Hola Mundo!</h1>
+  {{ persona | json }}
   <app-students />
 </app-main-wapper>
 <router-outlet />

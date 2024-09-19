@@ -8,6 +8,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MainWapperComponent } from './components/main-wapper/main-wapper.component';
 import { HeaderAppComponent } from './components/header-app/header-app.component';
 import { StudentsComponent } from './pages/students/students.component';
+import { RoudedBlockDirective } from './shared/rouded-block.directive';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { StudentsComponent } from './pages/students/students.component';
         SideBarComponent,
         MainWapperComponent,
         HeaderAppComponent,
-        StudentsComponent
+        StudentsComponent,
+        RoudedBlockDirective
     ],
     imports: [
         BrowserModule,
