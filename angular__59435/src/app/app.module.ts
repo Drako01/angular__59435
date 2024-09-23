@@ -10,6 +10,7 @@ import { HeaderAppComponent } from './components/header-app/header-app.component
 import { StudentsComponent } from './pages/students/students.component';
 import { RoudedBlockDirective } from './shared/rouded-block.directive';
 import { FormsModule } from '@angular/forms';
+import { ComunicationsComponent } from './pages/comunications/comunications.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
         MainWapperComponent,
         HeaderAppComponent,
         StudentsComponent,
-        RoudedBlockDirective
+        RoudedBlockDirective,
+        ComunicationsComponent
     ],
     imports: [
         BrowserModule,
