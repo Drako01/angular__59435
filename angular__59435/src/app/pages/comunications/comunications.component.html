@@ -2,3 +2,13 @@
   Clase 5 - Comunicación entre componentes
 </h2>
 <hr>
+<h4>Alumnos Aprobados</h4>
+<app-lista-alumnos
+  (eliminarAlumno)="onEliminarAlumno($event, 'aprobados')"
+  [alumnos]="alumnosAprobados"
+></app-lista-alumnos>
+<h4>Alumnos Desaprobados</h4>
+<app-lista-alumnos
+  (eliminarAlumno)="onEliminarAlumno($event, 'desaprobados')"
+  [alumnos]="alumnosDesaprobados"
+></app-lista-alumnos>

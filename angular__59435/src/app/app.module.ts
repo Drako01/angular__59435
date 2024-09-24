@@ -11,6 +11,7 @@ import { StudentsComponent } from './pages/students/students.component';
 import { RoudedBlockDirective } from './shared/rouded-block.directive';
 import { FormsModule } from '@angular/forms';
 import { ComunicationsComponent } from './pages/comunications/comunications.component';
+import { ListaAlumnosComponent } from './components/lista-alumnos/lista-alumnos.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ComunicationsComponent } from './pages/comunications/comunications.comp
         HeaderAppComponent,
         StudentsComponent,
         RoudedBlockDirective,
-        ComunicationsComponent
+        ComunicationsComponent,
+        ListaAlumnosComponent
     ],
     imports: [
         BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ListaAlumnosComponent } from './components/lista-alumnos/lista-alumnos.component';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,5 @@ export class AppComponent {
     nombre: "Alejandro",
     email: "alejandro@mil.com"
   }
+
 }
