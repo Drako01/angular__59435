@@ -8,6 +8,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ListaAlumnosComponent {
 
   @Input() alumnos: string[] = [];
-  @Output() eliminarAlumno = new EventEmitter<number>();
+  @Output() eliminarAlumno = new EventEmitter<{
+    index: number;
+    nombre: string;
+  }>();
 
 }

@@ -12,6 +12,7 @@ import { RoudedBlockDirective } from './shared/rouded-block.directive';
 import { FormsModule } from '@angular/forms';
 import { ComunicationsComponent } from './pages/comunications/comunications.component';
 import { ListaAlumnosComponent } from './components/lista-alumnos/lista-alumnos.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { ListaAlumnosComponent } from './components/lista-alumnos/lista-alumnos.
         StudentsComponent,
         RoudedBlockDirective,
         ComunicationsComponent,
-        ListaAlumnosComponent
+        ListaAlumnosComponent,
+        ModalComponent
     ],
     imports: [
         BrowserModule,

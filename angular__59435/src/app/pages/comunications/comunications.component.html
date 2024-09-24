@@ -4,11 +4,26 @@
 <hr>
 <h4>Alumnos Aprobados</h4>
 <app-lista-alumnos
-  (eliminarAlumno)="onEliminarAlumno($event, 'aprobados')"
+  (eliminarAlumno)="onEliminarAlumno($event.index, 'aprobados')"
   [alumnos]="alumnosAprobados"
 ></app-lista-alumnos>
 <h4>Alumnos Desaprobados</h4>
 <app-lista-alumnos
-  (eliminarAlumno)="onEliminarAlumno($event, 'desaprobados')"
+  (eliminarAlumno)="onEliminarAlumno($event.index, 'desaprobados')"
   [alumnos]="alumnosDesaprobados"
 ></app-lista-alumnos>
+
+<hr>
+
+<button #myBotton class="btn btn-success">
+  Click me!
+</button>
+<br><br>
+El modal esta: {{ modalVisible }}
+<br><br>
+<app-modal [(visible)]="modalVisible"></app-modal>
+
+
+<button (click)="modalVisible = !modalVisible" class="btn btn-primary">
+  Abrir modal
+</button>
